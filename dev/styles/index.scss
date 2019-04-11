@@ -1,0 +1,79 @@
+@import 'main';
+
+.container{
+  width: 101%;
+  height: 620px;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.header{
+  @extend .base;
+  color: $whiteFont;
+  font-size: $header;
+  background-image: linear-gradient($baseColor, darken($baseColor, 80%));
+  line-height: 231px;
+  text-indent: 3%;
+  position: relative;
+
+  &:hover{
+    background: darken($baseColor, 60%);
+  }
+}
+
+.btn{
+  color: $whiteFont;
+  background-color: $baseColor;
+  border: 1px solid $whiteFont;
+  border-radius: 9%;
+  position: absolute;
+  left: 4%;
+  bottom: 34%;
+  height: 25px;
+  width: 100px;
+
+  &:hover{
+    background-color: $whiteFont;
+    color: $baseColor;
+    border: 1px solid $baseColor;
+  }
+
+}
+
+.container-profile{
+  @extend .base;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user-profile{
+  width: 19%;
+  height: 80%;
+  box-shadow: 2px 2px 11px #172233;
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 1%; 
+
+}
+
+.photo{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+
+  img{
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.name{
+  font-size: $heading;
+  color: $redAccent;
+  line-height: 65px;
+}
+
+.moto{
+  font-size: $text;
+  color: $baseColor;
+}

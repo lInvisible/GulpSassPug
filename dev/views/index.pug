@@ -1,0 +1,30 @@
+doctype html
+head
+  title Holub Anna
+  meta(charset='utf-8')
+  link(rel='shortcut icon', href='http://freestencilletters.com/cursive-letters/stencil-a.JPG')
+  <link rel="stylesheet" href="css/index.css">
+body
+  .container
+    block header
+      .header The success of our team
+        input(type="button", value="learn more", class="btn")
+
+    block user-profile
+      .container-profile
+        mixin profile(n, m, i='images/1.png')
+          .user-profile
+            .photo
+              img(src= i)
+            .name= n
+            .moto= m
+        +profile("Steve Robins", "Enjoy working")
+        +profile("Elizabeth Cooper", "Enthusiasm")
+        +profile("Fred Marcoos", "Always working")
+
+
+
+
+       
+       
+    
