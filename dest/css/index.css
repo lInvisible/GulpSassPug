@@ -1,6 +1,6 @@
-.base, .header, .container-profile {
+.base, .header, .container-profile, .container-form, .container-barchart, .container-complexChart {
   width: 100%;
-  height: 310px;
+  height: 400px;
   background-color: #eaebf0; }
 
 .container {
@@ -15,9 +15,11 @@
   background-image: linear-gradient(#172233, black);
   line-height: 231px;
   text-indent: 3%;
-  position: relative; }
+  position: relative;
+  transition: 300ms color ease-in-out; }
   .header:hover {
-    background: black; }
+    background: black;
+    color: #f78c8c; }
 
 .btn {
   color: #eaebf0;
@@ -26,7 +28,7 @@
   border-radius: 9%;
   position: absolute;
   left: 4%;
-  bottom: 34%;
+  bottom: 200px;
   height: 25px;
   width: 100px; }
   .btn:hover {
@@ -40,19 +42,40 @@
 
 .user-profile {
   width: 19%;
-  height: 80%;
+  height: 265px;
   box-shadow: 2px 2px 11px #172233;
   text-align: center;
-  margin-top: 2%;
-  padding-top: 1%; }
+  margin-top: 20px;
+  padding-top: 10px;
+  transition: all 300ms ease-out; }
+  .user-profile:hover {
+    box-shadow: 0 0 2px 2px #172233;
+    overflow: hidden;
+    transform: scale(1.1); }
 
-.photo {
+.person-0 .photo {
   width: 50%;
   height: 50%;
-  margin: auto; }
-  .photo img {
-    width: 100%;
-    border-radius: 50%; }
+  margin: auto;
+  border-radius: 50%;
+  background: url(../images/0.jpg) center top;
+  background-size: 200px; }
+
+.person-1 .photo {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  border-radius: 50%;
+  background: url(../images/1.jpg) center top;
+  background-size: 200px; }
+
+.person-2 .photo {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  border-radius: 50%;
+  background: url(../images/2.jpg) center top;
+  background-size: 200px; }
 
 .name {
   font-size: 2rem;
@@ -62,3 +85,371 @@
 .moto {
   font-size: 1rem;
   color: #172233; }
+
+.container-form {
+  padding-left: 5%;
+  box-sizing: border-box; }
+  .container-form div {
+    font-size: 2rem;
+    color: #4c0505; }
+  .container-form span {
+    font-size: 1rem;
+    color: #4c0505; }
+
+form :nth-child(1) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(2) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(3) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(4) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(5) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(6) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(7) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(8) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(9) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(10) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(11) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(12) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(13) {
+  margin-bottom: 5px;
+  height: 30px;
+  width: 250px;
+  text-indent: 5px; }
+
+form :nth-child(5) {
+  height: 100px;
+  width: 248px; }
+
+form input[type="radio"] {
+  width: 10px;
+  height: 10px; }
+
+form input[type="submit"] {
+  background: #260303;
+  color: #eaebf0;
+  text-indent: 0;
+  border: 1px solid #172233;
+  transition: 300ms color ease-in-out; }
+  form input[type="submit"]:hover {
+    background: #172233; }
+
+.container-barchart {
+  padding: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; }
+  .container-barchart p {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 0px;
+    color: #172233; }
+  .container-barchart span {
+    font-size: 1rem;
+    color: #172233; }
+
+.blk {
+  display: flex;
+  width: 100%;
+  height: 360px; }
+
+.scale, .year {
+  display: flex;
+  flex-direction: column-reverse;
+  line-height: 23px;
+  text-align: center; }
+
+.barchart {
+  width: 97%;
+  height: 100%;
+  background: url(../images/bg.png);
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-top: 2px solid #172233;
+  border-right: 2px solid #172233;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+  .barchart .bars-0 {
+    width: 25%;
+    height: 100%;
+    display: flex; }
+    .barchart .bars-0 .bar-red {
+      width: 21%;
+      height: 194px;
+      background: #ff6666;
+      margin-left: 2%; }
+    .barchart .bars-0 .bar-yellow {
+      width: 21%;
+      height: 127px;
+      background: #ffff66;
+      margin-left: 2%; }
+    .barchart .bars-0 .bar-green {
+      width: 21%;
+      height: 180px;
+      background: #00e600;
+      margin-left: 2%; }
+    .barchart .bars-0 .bar-blue {
+      width: 21%;
+      height: 90px;
+      background: #6666ff;
+      margin-left: 2%; }
+  .barchart .bars-1 {
+    width: 25%;
+    height: 100%;
+    display: flex; }
+    .barchart .bars-1 .bar-red {
+      width: 21%;
+      height: 163px;
+      background: #ff6666;
+      margin-left: 2%; }
+    .barchart .bars-1 .bar-yellow {
+      width: 21%;
+      height: 3px;
+      background: #ffff66;
+      margin-left: 2%; }
+    .barchart .bars-1 .bar-green {
+      width: 21%;
+      height: 126px;
+      background: #00e600;
+      margin-left: 2%; }
+    .barchart .bars-1 .bar-blue {
+      width: 21%;
+      height: 252px;
+      background: #6666ff;
+      margin-left: 2%; }
+  .barchart .bars-2 {
+    width: 25%;
+    height: 100%;
+    display: flex; }
+    .barchart .bars-2 .bar-red {
+      width: 21%;
+      height: 236px;
+      background: #ff6666;
+      margin-left: 2%; }
+    .barchart .bars-2 .bar-yellow {
+      width: 21%;
+      height: 203px;
+      background: #ffff66;
+      margin-left: 2%; }
+    .barchart .bars-2 .bar-green {
+      width: 21%;
+      height: 253px;
+      background: #00e600;
+      margin-left: 2%; }
+    .barchart .bars-2 .bar-blue {
+      width: 21%;
+      height: 27px;
+      background: #6666ff;
+      margin-left: 2%; }
+  .barchart .bars-3 {
+    width: 25%;
+    height: 100%;
+    display: flex; }
+    .barchart .bars-3 .bar-red {
+      width: 21%;
+      height: 89px;
+      background: #ff6666;
+      margin-left: 2%; }
+    .barchart .bars-3 .bar-yellow {
+      width: 21%;
+      height: 177px;
+      background: #ffff66;
+      margin-left: 2%; }
+    .barchart .bars-3 .bar-green {
+      width: 21%;
+      height: 3px;
+      background: #00e600;
+      margin-left: 2%; }
+    .barchart .bars-3 .bar-blue {
+      width: 21%;
+      height: 166px;
+      background: #6666ff;
+      margin-left: 2%; }
+
+.container-month {
+  width: 76%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto; }
+
+.container-complexChart {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box; }
+  .container-complexChart p {
+    font-size: 2rem;
+    color: #054c4c; }
+
+.complexChart {
+  width: 100%;
+  height: 500px;
+  display: flex; }
+  .complexChart table {
+    width: 30%;
+    height: 100%; }
+
+.chart {
+  width: 60%;
+  height: 100%;
+  background: url(../images/bg.png);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box; }
+  .chart .charts-0 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column; }
+    .chart .charts-0 .bar-red {
+      max-width: 2px;
+      height: 30px;
+      background: rgba(255, 0, 0, 0.8); }
+    .chart .charts-0 .bar-yellow {
+      max-width: 682px;
+      height: 30px;
+      background: rgba(255, 128, 0, 0.65); }
+    .chart .charts-0 .bar-green {
+      max-width: 95px;
+      height: 30px;
+      background: rgba(128, 64, 0, 0.5); }
+    .chart .charts-0 .bar-blue {
+      max-width: 246px;
+      height: 30px;
+      background: rgba(128, 0, 128, 0.35); }
+  .chart .charts-1 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column; }
+    .chart .charts-1 .bar-red {
+      max-width: 137px;
+      height: 30px;
+      background: rgba(255, 0, 0, 0.8); }
+    .chart .charts-1 .bar-yellow {
+      max-width: 232px;
+      height: 30px;
+      background: rgba(255, 128, 0, 0.65); }
+    .chart .charts-1 .bar-green {
+      max-width: 545px;
+      height: 30px;
+      background: rgba(128, 64, 0, 0.5); }
+    .chart .charts-1 .bar-blue {
+      max-width: 520px;
+      height: 30px;
+      background: rgba(128, 0, 128, 0.35); }
+  .chart .charts-2 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column; }
+    .chart .charts-2 .bar-red {
+      max-width: 80px;
+      height: 30px;
+      background: rgba(255, 0, 0, 0.8); }
+    .chart .charts-2 .bar-yellow {
+      max-width: 101px;
+      height: 30px;
+      background: rgba(255, 128, 0, 0.65); }
+    .chart .charts-2 .bar-green {
+      max-width: 330px;
+      height: 30px;
+      background: rgba(128, 64, 0, 0.5); }
+    .chart .charts-2 .bar-blue {
+      max-width: 58px;
+      height: 30px;
+      background: rgba(128, 0, 128, 0.35); }
+  .chart .charts-3 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column; }
+    .chart .charts-3 .bar-red {
+      max-width: 586px;
+      height: 30px;
+      background: rgba(255, 0, 0, 0.8); }
+    .chart .charts-3 .bar-yellow {
+      max-width: 261px;
+      height: 30px;
+      background: rgba(255, 128, 0, 0.65); }
+    .chart .charts-3 .bar-green {
+      max-width: 491px;
+      height: 30px;
+      background: rgba(128, 64, 0, 0.5); }
+    .chart .charts-3 .bar-blue {
+      max-width: 741px;
+      height: 30px;
+      background: rgba(128, 0, 128, 0.35); }
+
+.year {
+  line-height: 110px; }
+
+.points {
+  display: flex;
+  margin-left: 32px; }
+  .points span {
+    width: 127px;
+    display: block; }

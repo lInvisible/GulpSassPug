@@ -15,9 +15,11 @@
   line-height: 231px;
   text-indent: 3%;
   position: relative;
+  transition: 300ms color ease-in-out;
 
   &:hover{
     background: darken($baseColor, 60%);
+    color: lighten($redAccent, 60%);
   }
 }
 
@@ -28,7 +30,7 @@
   border-radius: 9%;
   position: absolute;
   left: 4%;
-  bottom: 34%;
+  bottom: 200px;
   height: 25px;
   width: 100px;
 
@@ -48,22 +50,30 @@
 
 .user-profile{
   width: 19%;
-  height: 80%;
-  box-shadow: 2px 2px 11px #172233;
+  height: 265px;
+  box-shadow: 2px 2px 11px $baseColor;
   text-align: center;
-  margin-top: 2%;
-  padding-top: 1%; 
+  margin-top: 20px;
+  padding-top: 10px;
+  transition: all 300ms ease-out;
 
+  &:hover{
+    box-shadow:  0 0 2px 2px $baseColor;
+    overflow: hidden;
+    transform: scale(1.1);
+  }
 }
 
-.photo{
-  width: 50%;
-  height: 50%;
-  margin: auto;
-
-  img{
-    width: 100%;
-    border-radius: 50%;
+@for $i from 0 to 3 {
+  .person-#{$i}{
+    .photo{
+      width: 50%;
+      height: 50%;
+      margin: auto;
+      border-radius: 50%;
+      background: url(../images/#{$i}.jpg) center top;
+      background-size: 200px;
+    }
   }
 }
 
@@ -76,4 +86,181 @@
 .moto{
   font-size: $text;
   color: $baseColor;
+}
+
+.container-form{
+  @extend .base;
+
+  padding-left: 5%;
+  box-sizing: border-box;
+
+  div{
+    font-size: $heading;
+    color: $redAccent;
+  }
+
+  span{
+    font-size: $text;
+    color: $redAccent;
+  }
+
+}
+
+form{
+  @for $i from 1 to 14 {
+    :nth-child(#{$i}){
+      margin-bottom: 5px;
+      height: 30px;
+      width: 250px;
+      text-indent: 5px;
+    }
+  }
+
+  :nth-child(5){
+    height: 100px;
+    width: 248px;
+  }
+
+  input[type="radio"]{
+    width: 10px;
+    height: 10px;
+  }
+
+  input[type="submit"]{
+    background: mix($redAccent, darken($redAccent, 30%));
+    color: $whiteFont;
+    text-indent: 0;
+    border: 1px solid $baseColor;
+    transition: 300ms color ease-in-out;
+
+    &:hover{
+      background: $baseColor;
+    }
+  }
+}
+
+.container-barchart{
+  @extend .base;
+  padding: 2%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  p{
+    font-size: $heading;
+    text-align: center;
+    line-height: 0px;
+    color: $baseColor;
+  }
+
+  span{
+    font-size: $text;
+    color: $baseColor;
+  }
+}
+
+.blk{
+  display: flex;
+  width: 100%;
+  height: 360px;
+}
+
+.scale{
+  display: flex;
+  flex-direction: column-reverse;
+  line-height: 23px;
+  text-align: center;
+}
+
+.barchart{
+  width: 97%;
+  height: 100%;
+  background: url(../images/bg.png);
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-top: 2px solid $baseColor;
+  border-right: 2px solid $baseColor;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+
+  @for $i from 0 to 4{
+    .bars-#{$i}{
+      width: 25%;
+      height: 100%;
+      display: flex;
+      @include color-bars;
+    }
+  }
+}
+
+.container-month{
+  width: 76%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.container-complexChart{
+  @extend .base;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+
+  p{
+    font-size: $heading;
+    color: complement($redAccent);
+  }
+
+}
+
+.complexChart{
+  width: 100%;
+  height: 500px;
+  display: flex;
+
+  table{
+    width: 30%;
+    height: 100%;
+  }
+}
+
+.chart{
+  width: 60%;
+  height: 100%;
+  background: url(../images/bg.png);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 5px;
+  box-sizing: border-box;
+  
+  @for $i from 0 to 4{
+    .charts-#{$i}{
+      width: 100%;
+      height: 25%;
+      display: flex;
+      flex-direction: column;
+      @include color-charts;
+    }
+  }
+}
+
+.year{
+  @extend .scale;
+  line-height: 110px;
+}
+
+.points{
+  display: flex;
+  margin-left: 32px;
+
+  span{
+    width: 127px;
+    display: block;
+  }
 }

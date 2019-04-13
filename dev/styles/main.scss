@@ -6,10 +6,38 @@ $header: 3.5rem;
 $heading: 2rem;
 $text: 1rem;
 
-$blck_height: 310px;
+$blck_height: 400px;
+
+$num: 0.2;
+
+$colors: red, yellow, green, blue;
 
 .base{
   width: 100%;
   height: $blck_height;
   background-color: $whiteFont;
+}
+
+@mixin color-bars{
+  @each $color in $colors{
+    $random: #{random(260)}px;
+    .bar-#{$color}{
+      width: 21%;
+      height: $random;
+      background: lighten($color, 20%);
+      margin-left: 2%;
+    }
+  }
+}
+
+@mixin color-charts{
+  @each $color in $colors{
+    $random: #{random(760)}px;
+    .bar-#{$color}{
+      max-width: $random;
+      height: 30px;
+      background: transparentize(mix($color, red), $num);
+    }
+    $num: $num + 0.15;
+  }
 }

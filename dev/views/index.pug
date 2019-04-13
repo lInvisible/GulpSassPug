@@ -11,16 +11,78 @@ body
         input(type="button", value="learn more", class="btn")
 
     block user-profile
+      - const lst = ["Steve Robins", "Fred Marcoos", "Elizabeth Cooper"]
       .container-profile
-        mixin profile(n, m, i='images/1.png')
-          .user-profile
-            .photo
-              img(src= i)
-            .name= n
-            .moto= m
-        +profile("Steve Robins", "Enjoy working")
-        +profile("Elizabeth Cooper", "Enthusiasm")
-        +profile("Fred Marcoos", "Always working")
+        mixin profile(n, m= "Always working")
+          .photo
+          .name= n
+          .moto= m
+        - for(let i=0;i<=2;i++){
+            div(class="user-profile person-" + i)
+              +profile(lst[i])
+        - }
+    block barchart
+      .container-barchart
+        p Achievements for the period
+        .blk 
+          .scale
+            - for(let i=0;i<=100;i+=10){
+                span #{i}
+            - }
+          .barchart
+            - const colors = ["red", "yellow", "green", "blue"]
+            - const month = ["March", "April", "May", "June"]
+
+            mixin bar
+              each color in colors
+                div(class="bar-"+ color)
+
+            - for(let i=0;i<=3;i++){
+                div(class="bars-" + i)
+                  +bar
+            - }
+        .container-month
+          - for(let i=0;i<=3;i++){
+              span #{month[i]}
+          - }
+    block complexChart
+      .container-complexChart
+        p Rate
+        .complexChart
+          - years = ["2016", "2017", "2018", "2019"]
+          .year
+            each y in years
+              span #{y}
+          .chart
+            - for(let i=0;i<=3;i++){
+                div(class="charts-" + i)
+                  +bar
+            - }
+          table
+        .points
+          - for(let i=0;i<=100;i+=15){
+              span #{i}
+          - }
+
+    block userform
+      .container-form
+        div Join US!
+        form
+          input(type="text" placeholder="name" required)
+          br
+          input(type="email" pattern=".+@gmail.com" placeholder="email" required)
+          br
+          textarea(placeholder="message" cols="20" wrap="hard")
+          br
+          input(type="radio" checked)
+          span Receive messages*
+          br
+          input(type="radio")
+          span Do not receive messages*
+          br
+          input(type="submit" value="Send")
+    
+    
 
 
 
