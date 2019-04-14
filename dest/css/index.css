@@ -228,22 +228,22 @@ form input[type="submit"] {
     display: flex; }
     .barchart .bars-0 .bar-red {
       width: 21%;
-      height: 236px;
+      height: 138px;
       background: #ff6666;
       margin-left: 2%; }
     .barchart .bars-0 .bar-yellow {
       width: 21%;
-      height: 44px;
+      height: 106px;
       background: #ffff66;
       margin-left: 2%; }
     .barchart .bars-0 .bar-green {
       width: 21%;
-      height: 218px;
+      height: 189px;
       background: #00e600;
       margin-left: 2%; }
     .barchart .bars-0 .bar-blue {
       width: 21%;
-      height: 177px;
+      height: 172px;
       background: #6666ff;
       margin-left: 2%; }
   .barchart .bars-1 {
@@ -252,22 +252,22 @@ form input[type="submit"] {
     display: flex; }
     .barchart .bars-1 .bar-red {
       width: 21%;
-      height: 133px;
+      height: 52px;
       background: #ff6666;
       margin-left: 2%; }
     .barchart .bars-1 .bar-yellow {
       width: 21%;
-      height: 193px;
+      height: 167px;
       background: #ffff66;
       margin-left: 2%; }
     .barchart .bars-1 .bar-green {
       width: 21%;
-      height: 183px;
+      height: 39px;
       background: #00e600;
       margin-left: 2%; }
     .barchart .bars-1 .bar-blue {
       width: 21%;
-      height: 6px;
+      height: 201px;
       background: #6666ff;
       margin-left: 2%; }
   .barchart .bars-2 {
@@ -276,22 +276,22 @@ form input[type="submit"] {
     display: flex; }
     .barchart .bars-2 .bar-red {
       width: 21%;
-      height: 113px;
+      height: 173px;
       background: #ff6666;
       margin-left: 2%; }
     .barchart .bars-2 .bar-yellow {
       width: 21%;
-      height: 121px;
+      height: 7px;
       background: #ffff66;
       margin-left: 2%; }
     .barchart .bars-2 .bar-green {
       width: 21%;
-      height: 13px;
+      height: 126px;
       background: #00e600;
       margin-left: 2%; }
     .barchart .bars-2 .bar-blue {
       width: 21%;
-      height: 15px;
+      height: 42px;
       background: #6666ff;
       margin-left: 2%; }
   .barchart .bars-3 {
@@ -300,22 +300,22 @@ form input[type="submit"] {
     display: flex; }
     .barchart .bars-3 .bar-red {
       width: 21%;
-      height: 97px;
+      height: 145px;
       background: #ff6666;
       margin-left: 2%; }
     .barchart .bars-3 .bar-yellow {
       width: 21%;
-      height: 14px;
+      height: 72px;
       background: #ffff66;
       margin-left: 2%; }
     .barchart .bars-3 .bar-green {
       width: 21%;
-      height: 207px;
+      height: 227px;
       background: #00e600;
       margin-left: 2%; }
     .barchart .bars-3 .bar-blue {
       width: 21%;
-      height: 112px;
+      height: 31px;
       background: #6666ff;
       margin-left: 2%; }
 
@@ -360,19 +360,19 @@ form input[type="submit"] {
     display: flex;
     flex-direction: column; }
     .chart .charts-0 .bar-red {
-      max-width: 708px;
+      max-width: 318px;
       height: 30px;
       background: rgba(255, 0, 0, 0.8); }
     .chart .charts-0 .bar-yellow {
-      max-width: 507px;
+      max-width: 109px;
       height: 30px;
       background: rgba(255, 128, 0, 0.65); }
     .chart .charts-0 .bar-green {
-      max-width: 4px;
+      max-width: 469px;
       height: 30px;
       background: rgba(128, 64, 0, 0.5); }
     .chart .charts-0 .bar-blue {
-      max-width: 14px;
+      max-width: 551px;
       height: 30px;
       background: rgba(128, 0, 128, 0.35); }
   .chart .charts-1 {
@@ -381,19 +381,19 @@ form input[type="submit"] {
     display: flex;
     flex-direction: column; }
     .chart .charts-1 .bar-red {
-      max-width: 461px;
+      max-width: 337px;
       height: 30px;
       background: rgba(255, 0, 0, 0.8); }
     .chart .charts-1 .bar-yellow {
-      max-width: 455px;
+      max-width: 165px;
       height: 30px;
       background: rgba(255, 128, 0, 0.65); }
     .chart .charts-1 .bar-green {
-      max-width: 547px;
+      max-width: 173px;
       height: 30px;
       background: rgba(128, 64, 0, 0.5); }
     .chart .charts-1 .bar-blue {
-      max-width: 405px;
+      max-width: 724px;
       height: 30px;
       background: rgba(128, 0, 128, 0.35); }
   .chart .charts-2 {
@@ -402,19 +402,19 @@ form input[type="submit"] {
     display: flex;
     flex-direction: column; }
     .chart .charts-2 .bar-red {
-      max-width: 351px;
+      max-width: 415px;
       height: 30px;
       background: rgba(255, 0, 0, 0.8); }
     .chart .charts-2 .bar-yellow {
-      max-width: 639px;
+      max-width: 125px;
       height: 30px;
       background: rgba(255, 128, 0, 0.65); }
     .chart .charts-2 .bar-green {
-      max-width: 75px;
+      max-width: 370px;
       height: 30px;
       background: rgba(128, 64, 0, 0.5); }
     .chart .charts-2 .bar-blue {
-      max-width: 326px;
+      max-width: 425px;
       height: 30px;
       background: rgba(128, 0, 128, 0.35); }
   .chart .charts-3 {
@@ -423,11 +423,11 @@ form input[type="submit"] {
     display: flex;
     flex-direction: column; }
     .chart .charts-3 .bar-red {
-      max-width: 617px;
+      max-width: 139px;
       height: 30px;
       background: rgba(255, 0, 0, 0.8); }
     .chart .charts-3 .bar-yellow {
-      max-width: 255px;
+      max-width: 580px;
       height: 30px;
       background: rgba(255, 128, 0, 0.65); }
     .chart .charts-3 .bar-green {
@@ -435,7 +435,7 @@ form input[type="submit"] {
       height: 30px;
       background: rgba(128, 64, 0, 0.5); }
     .chart .charts-3 .bar-blue {
-      max-width: 55px;
+      max-width: 631px;
       height: 30px;
       background: rgba(128, 0, 128, 0.35); }
 
