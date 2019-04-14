@@ -50,19 +50,35 @@ body
         p Rate
         .complexChart
           - years = ["2016", "2017", "2018", "2019"]
-          .year
-            each y in years
-              span #{y}
-          .chart
-            - for(let i=0;i<=3;i++){
-                div(class="charts-" + i)
-                  +bar
-            - }
+          .container-chart    
+            .chart
+              .year
+                each y in years
+                  span #{y}
+              - for(let i=0;i<=3;i++){
+                  div(class="charts-" + i)
+                    +bar
+              - }
+            .points
+              - for(let i=10;i<=115;i+=15){
+                  span #{i}
+              - }
+          - nums = ["420", "207", "360", "810"]
+          - colnames = ["quality", "amount", "time", "rate"]
           table
-        .points
-          - for(let i=0;i<=100;i+=15){
-              span #{i}
-          - }
+            mixin tds
+              each n in nums
+                td #{n}
+            thead
+              tr
+                td year
+                each col in colnames
+                  td #{col}
+            tbody
+              each y in years
+                tr 
+                  td #{y}
+                  +tds  
 
     block userform
       .container-form
@@ -74,10 +90,10 @@ body
           br
           textarea(placeholder="message" cols="20" wrap="hard")
           br
-          input(type="radio" checked)
+          input(type="radio" name="message" value="do" checked)
           span Receive messages*
           br
-          input(type="radio")
+          input(type="radio" name="message" value="don`t")
           span Do not receive messages*
           br
           input(type="submit" value="Send")

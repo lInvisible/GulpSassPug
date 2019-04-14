@@ -5,12 +5,14 @@ $redAccent: rgb(76, 5, 5);
 $header: 3.5rem;
 $heading: 2rem;
 $text: 1rem;
+$text_sm: 0.5rem;
 
 $blck_height: 400px;
 
 $num: 0.2;
 
 $colors: red, yellow, green, blue;
+$breakpoints: 375px, 768px;
 
 .base{
   width: 100%;
