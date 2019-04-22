@@ -29,6 +29,9 @@ $breakpoints: 375px, 768px;
       background: lighten($color, 20%);
       margin-left: 2%;
     }
+    .bar-#{$color}:hover{
+      background: lighten($color, 10%);
+    }
   }
 }
 
@@ -41,5 +44,8 @@ $breakpoints: 375px, 768px;
       background: transparentize(mix($color, red), $num);
     }
     $num: $num + 0.15;
+    .bar-#{$color}:hover{
+      background: transparentize(mix($color, red), $num);
+    }
   }
 }
